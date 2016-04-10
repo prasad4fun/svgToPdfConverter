@@ -24,7 +24,7 @@ function svgToPdf(svg, callback) {
             canvas.height = image.height;
             context.drawImage(image, 0, 0, image.width, image.height);
             dataUrl = canvas.toDataURL('image/jpeg', 1.0); //fullQuality image
-            pdfDoc.addImage(dataUrl, 'JPEG', 0, 0, 600, 400); //image.width, image.height overflowing the pdf page resolution
+            pdfDoc.addImage(dataUrl, 'JPEG', 0, 0, 600, 400); //image.width overflowing in the pdf page resolution
             callback(pdfDoc);
         }
     });
