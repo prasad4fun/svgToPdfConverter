@@ -1,6 +1,6 @@
 function triggerSvgToPdf() {
     svgToPdf(document.querySelector("div#graph svg"), function(pdf) {
-        download_pdf('SVG.pdf', pdf.output('dataurlstring'));
+        download_pdf('Income of Country (In trillion dollars).pdf', pdf.output('dataurlstring'));
     });
 };
 
@@ -24,8 +24,7 @@ function svgToPdf(svg, callback) {
             canvas.height = image.height;
             context.drawImage(image, 0, 0, image.width, image.height);
             dataUrl = canvas.toDataURL('image/jpeg', 1.0); //fullQuality image
-            pdfDoc.addImage(dataUrl, 'JPEG', 0, 0, 600, 400);
-
+            pdfDoc.addImage(dataUrl, 'JPEG', 0, 0, 600, 400); //image.width, image.height overflowing the pdf page resolution
             callback(pdfDoc);
         }
     });
@@ -36,8 +35,8 @@ function download_pdf(name, dataUriString) {
     pdfDocLink.addEventListener('click', function(ev) {
         pdfDocLink.href = dataUriString;
         pdfDocLink.download = name;
-        document.body.removeChild(link);
+        document.body.removeChild(pdfDocLink);
     }, false);
-    document.body.appendChild(link);
+    document.body.appendChild(pdfDocLink);
     pdfDocLink.click();
 }

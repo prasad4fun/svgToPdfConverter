@@ -80,6 +80,7 @@ d3.json("json files/GDP_GNI_percap.json", function(error, data) {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+      .attr("transform", "translate(10)")
       .style("fill", function(d) { return color(d.Country); });
 
   var legend = svg.selectAll(".legend")
