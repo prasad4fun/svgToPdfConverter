@@ -1,0 +1,15 @@
+{
+  "name": "graph_to_pdf",
+  "version": "1.0.0",
+  "description": "converts the d3 svg to pdf",
+  "main": "svgToPdf.js",
+  "scripts": {
+    "start": "supervisor bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hari prasad",
+  "license": "MIT",
+  "dependencies": {
+    "save-svg-as-png": "^1.0.2"
+  }
+}
