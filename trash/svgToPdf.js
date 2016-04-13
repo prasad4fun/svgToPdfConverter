@@ -1,5 +1,5 @@
 function triggerSvgToPdf() {
-    svgToPdf(document.querySelector("div#graph svg"), function(pdf) {
+    svgToPdf(document.querySelector("div#graph1 svg"), function(pdf) {
         download_pdf('Income of Country (In trillion dollars).pdf', pdf.output('dataurlstring'));
     });
 };

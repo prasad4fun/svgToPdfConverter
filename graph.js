@@ -21,7 +21,7 @@ var yAxis = d3.svg.axis()
     .tickFormat(formatGdpValue)
     .orient("left");
 
-var svg = d3.select("#graph").append("svg")
+var svg = d3.select("#graph1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

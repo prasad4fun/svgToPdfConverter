@@ -1,17 +1,26 @@
 <!doctype html5>
 <html>
 <head></head>
-<body>
-    <div id="graph">
+<body >
+  <div id="graph1" class="svgContainer">
 
-    </div>
+  </div>
+  <div id="graph2" class="svgContainer">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
-    <script src="https://rawgit.com/MrRio/jsPDF/master/dist/jspdf.debug.js"></script>
-    <script src="node_modules/save-svg-as-png/saveSvgAsPng.js"></script>
-    <script src="svgToPdf.js"></script>
+  </div>
 
-    <script src="graph.js"></script>
-    <p><button onclick="triggerSvgToPdf()">Download</button></p>
+  <script src="d3.min.js"></script>
+  <script src="node_modules/jspdf.min.js"></script>
+  <script src="node_modules/save-svg-as-png/saveSvgAsPng.js"></script>
+  <!-- <canvas id="canvastag" height="500" width="1000" style="display:none;"></canvas> -->
+
+  <script src="multipleSvgToPdf.js"></script>
+  <!-- <script src="svgToPdf.js"></script> -->
+
+  <script src="graph.js"></script>
+  <script src="GDP_india.js"></script>
+  <!-- <p><button onclick="triggerSvgToPdf()">Download</button></p> -->
+  <button onclick="triggerSvgToPdf(body)">PDF</button>
+
 </body>
 </html>
